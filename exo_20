@@ -1,0 +1,4 @@
+select avg(note) as moyenneNotes
+from notation
+join film on notation.idFilm=film.idFilm
+where film.titre="memento"

@@ -1,0 +1,20 @@
+select f.titre
+from artiste a 
+join role r on a.idArtiste = r.idArtiste
+join film f on r.idFilm= f.idFilm
+where  a.nom ="tarantino" and a.prénom="quentin"  
+and r.nomRôle !="acteur"
+
+
+
+-----------------------------
+avec la nouvelle bd
+
+select film.titre
+from film
+
+join artiste on film.idRéalisateur= artiste.idArtiste
+left join role on film.idFilm = role.idFilm
+left join artiste as acteur on role.idActeur=acteur.idArtiste
+where artiste.nom ="tarantino" and artiste.prénom = "quentin"
+and (acteur.nom is null or acteur.prénom is null)

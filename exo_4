@@ -1,0 +1,4 @@
+select artiste.nom, artiste.prénom
+from artiste
+join film on film.idRéalisateur = artiste.idArtiste
+where film.titre ="Memento"

@@ -1,0 +1,4 @@
+select film.titre
+from film
+left join role on film.idFilm= role.idFilm
+where role.idActeur is null

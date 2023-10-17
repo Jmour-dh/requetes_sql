@@ -1,0 +1,4 @@
+select artiste.nom, artiste.prénom, count(film.idFilm) as NombreFilms
+from artiste
+join film on artiste.idArtiste=film.idRéalisateur
+group by artiste.nom, artiste.prénom

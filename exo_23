@@ -1,0 +1,6 @@
+select film.titre, avg(notation.note) as moyenneNotes
+from film
+join notation on film.idFilm = notation.idFilm
+group by film.titre
+having avg(notation.note) > 7
+

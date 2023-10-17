@@ -1,0 +1,6 @@
+select artiste.nom, artiste.prénom
+from artiste
+join role on artiste.idArtiste = role.idActeur
+join film on role.idFilm=film.idFilm
+where role.nomRôle="Chewbacca"
+group by artiste.nom, artiste.prénom

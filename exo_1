@@ -1,0 +1,1 @@
+select nom As nom_Artiste, annéeNaiss As année_de_naissance_Artiste from artiste where annéeNaiss < 1950

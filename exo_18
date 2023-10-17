@@ -1,0 +1,9 @@
+select film.titre
+from film
+left join notation on film.idFilm = notation.idFilm
+join internaute on notation.email=internaute.email
+where internaute.prénom="prénom1" and internaute.nom="nom1"
+and notation.note is null
+
+
+/*a voir */

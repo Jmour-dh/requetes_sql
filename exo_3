@@ -1,0 +1,7 @@
+
+ 
+ select film.titre, role.nomRôle
+from role
+join artiste on role.idActeur = artiste.idArtiste
+join film on role.idFilm = film.idFilm
+where artiste.nom ="willis" and artiste.prénom="bruce"

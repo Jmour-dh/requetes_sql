@@ -1,0 +1,1 @@
+select titre, note from film c  right join notation a on c.idFilm= a.idFilm where titre="fargo"

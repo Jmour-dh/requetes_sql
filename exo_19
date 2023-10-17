@@ -1,0 +1,4 @@
+select distinct acteur.nom, acteur.prénom
+from artiste as acteur
+left join role on acteur.idArtiste = role.idActeur
+where role.idActeur is null

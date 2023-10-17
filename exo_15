@@ -1,0 +1,8 @@
+select film.titre
+from film
+join role on film.idFilm = role.idFilm
+join artiste as realisateur on film.idRéalisateur=realisateur.idArtiste
+join artiste on role.idActeur = artiste.idArtiste
+where realisateur.nom ="hitchcock" and realisateur.prénom="alfred"
+and (artiste.nom != "stewart" or artiste.prénom !="james" or artiste.nom is null or artiste.prénom is null)
+group by film.titre

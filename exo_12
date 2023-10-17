@@ -1,0 +1,5 @@
+select artiste.nom as nomMetreurScene,artiste.prénom as PrénomMetreurScene, role.nomRôle, film.titre
+ from artiste
+join role on artiste.idArtiste= role.idActeur
+join film on role.idFilm =film.idFilm
+where artiste.idArtiste in (select idRéalisateur from film where idRéalisateur = idActeur)

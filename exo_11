@@ -1,0 +1,5 @@
+select film.titre, role.nomRôle
+from film
+join role on film.idFilm = role.idFilm
+join artiste on role.idActeur = artiste.idArtiste
+where artiste.nom ="Allen" and artiste.prénom = "Woody"

@@ -1,0 +1,7 @@
+select film.titre, realisateur.nom as nomRealisateur, acteur.nom as nomInterprete
+from film
+join artiste as realisateur on film.idRéalisateur =realisateur.idArtiste
+join role on film.idFilm = role.idFilm
+join artiste as acteur on role.idActeur = acteur.idArtiste
+where realisateur.prénom =acteur.prénom 
+and realisateur.idArtiste != acteur.idArtiste

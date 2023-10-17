@@ -1,0 +1,7 @@
+select film.titre
+from film
+join artiste as realisateur on film.idRéalisateur= realisateur.idArtiste
+join role on film.idFilm =role.idFilm
+join artiste as acteur on role.idActeur =acteur.idArtiste
+where realisateur.nom="Burton" and realisateur.prénom ="Tim"
+and acteur.nom="Depp" and acteur.prénom="johnny"

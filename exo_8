@@ -1,0 +1,5 @@
+select artiste.nom
+from artiste
+join role on artiste.idArtiste = role.idActeur
+join film  on role.idFilm = film.idFilm
+where film.titre ="Sueurs froides"
